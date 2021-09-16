@@ -179,7 +179,7 @@ credential validation and can be <a path-0="hyperledger-indy.readthedocs.io"path
 <li><strong>DID Indy Namespace</strong>: a string that identifies the name of the primary Indy ledger, followed by a <code>:</code>. The namespace string may optionally have a secondary ledger name prefixed by a <code>:</code> following the primary name. If there is no secondary ledger element, the DID resides on the primary ledger, else it resides on the secondary ledger. By convention, the primary is a production ledger while the secondary ledgers are non-production ledgers (e.g. staging, test, development) associated with the primary ledger. Examples include, <code>sovrin</code>, <code>sovrin:staging</code> and <code>idunion</code>.</li>
 <li><strong>Namespace Identifier</strong>: a self-certifying identifier unique to the given DID Indy namespace. To be
 self-certifying the identifier must be derived from the initial verkey associated with the identifier. See the
-<a href="10_did_operations.md#Creation" >DID Creation</a> section of this document for the derivation details.</li>
+<a href="#creation" >DID Creation</a> section of this document for the derivation details.</li>
 </ul>
 <p>The components are assembled as follows:</p>
 <p><code>did:indy:&lt;namespace&gt;:&lt;namespace identifier&gt;</code></p>
@@ -232,7 +232,7 @@ self-certifying the identifier must be derived from the initial verkey associate
 <li><code>npdb</code> is the client-defined schema name</li>
 <li><code>4.3.4</code> is the client-defined tag for the <a class="term-reference" href="#term:schema">SCHEMA</a></li>
 </ul>
-<h4 id="claim-def"><a class="toc-anchor" href="#claim-def" >§</a> Claim Def:</h4>
+<h4 id="claim-def"><a class="toc-anchor" href="#claim-def" >§</a> Claim Def</h4>
 <p>DID URL: <a path-0="indyscan.io"path-1="tx"path-2="SOVRIN_MAINNET"path-3="domain"path-4="56496"href="https://indyscan.io/tx/SOVRIN_MAINNET/domain/56496" ><code>did:indy:sovrin:5nDyJVP1NrcPAttP3xwMB9/CLAIM_DEF/npdb</code></a></p>
 <p>Response: Same as the Indy Node <a path-0="hyperledger-indy.readthedocs.io"path-1="projects"path-2="node"path-3="en"path-4="latest"path-5="requests.html#get-claim-def"href="https://hyperledger-indy.readthedocs.io/projects/node/en/latest/requests.html#get-claim-def" >GET_CLAIM_DEF Txn</a></p>
 <p>Existing identifier: <code>did:indy:sovrin:5nDyJVP1NrcPAttP3xwMB9:3:CL:56495:npdb</code></p>
@@ -243,7 +243,7 @@ self-certifying the identifier must be derived from the initial verkey associate
 <li><code>npdb</code> is the client-defined claim def name</li>
 </ul>
 <p>Note that the DID URL format adds a constraint on the client-defined claim def name from the <code>did:sov</code> DID Method. Specifically, the same named claim def can no longer be associated with different <a class="term-reference" href="#term:schema">SCHEMA</a> objects.</p>
-<h4 id="revocation-registry-definition"><a class="toc-anchor" href="#revocation-registry-definition" >§</a> Revocation Registry Definition:</h4>
+<h4 id="revocation-registry-definition"><a class="toc-anchor" href="#revocation-registry-definition" >§</a> Revocation Registry Definition</h4>
 <p>DID URL: <a path-0="indyscan.io"path-1="tx"path-2="SOVRIN_MAINNET"path-3="domain"path-4="56497"href="https://indyscan.io/tx/SOVRIN_MAINNET/domain/56497" ><code>did:indy:sovrin:5nDyJVP1NrcPAttP3xwMB9/REV_REG_DEF/npdb/TAG1</code></a></p>
 <p>Response: Same as the Indy Node <a path-0="hyperledger-indy.readthedocs.io"path-1="projects"path-2="node"path-3="en"path-4="latest"path-5="requests.html#get-revoc-reg-def"href="https://hyperledger-indy.readthedocs.io/projects/node/en/latest/requests.html#get-revoc-reg-def" >GET_REVOC_REG_DEF Txn</a></p>
 <p>Existing Identifier: <code>5nDyJVP1NrcPAttP3xwMB9:4:5nDyJVP1NrcPAttP3xwMB9:3:CL:56495:npdb:CL_ACCUM:TAG1</code></p>
@@ -252,7 +252,7 @@ self-certifying the identifier must be derived from the initial verkey associate
 <li><code>5nDyJVP1NrcPAttP3xwMB9:3:CL:56495:npdb</code> is the identifier of the associated Claim Def</li>
 <li><code>TAG1</code> is the client-defined rev reg name</li>
 </ul>
-<h4 id="revocation-registry-entry"><a class="toc-anchor" href="#revocation-registry-entry" >§</a> Revocation Registry Entry:</h4>
+<h4 id="revocation-registry-entry"><a class="toc-anchor" href="#revocation-registry-entry" >§</a> Revocation Registry Entry</h4>
 <p>DID URL: <a path-0="indyscan.io"path-1="tx"path-2="SOVRIN_MAINNET"path-3="domain"path-4="58567"href="https://indyscan.io/tx/SOVRIN_MAINNET/domain/58567" >did:indy:sovrin:5nDyJVP1NrcPAttP3xwMB9/REV_REG_ENTRY/npdb/TAG1</a></p>
 <p>The DID URL resolution response depends on the query parameters used, as follows:</p>
 <ul>
@@ -275,7 +275,7 @@ self-certifying the identifier must be derived from the initial verkey associate
 <li><code>5</code> is the enumerated object type</li>
 <li>The remainder of the identifier is the identifier for the applicable Revocation Registry</li>
 </ul>
-<h4 id="attrib"><a class="toc-anchor" href="#attrib" >§</a> ATTRIB:</h4>
+<h4 id="attrib"><a class="toc-anchor" href="#attrib" >§</a> ATTRIB</h4>
 <p>DID URL: <a path-0="indyscan.io"path-1="tx"path-2="SOVRIN_MAINNET"path-3="domain"path-4="54743"href="https://indyscan.io/tx/SOVRIN_MAINNET/domain/54743" ><code>did:indy:sovrin:5nDyJVP1NrcPAttP3xwMB9/ATTRIB/&lt;raw&gt;</code></a>, where <code>&lt;raw&gt;</code> is the name of the JSON object that is the value of the <code>raw</code> <a class="term-reference" href="#term:attrib">ATTRIB</a> value. In the example linked at the start of this paragraph, the <code>&lt;raw&gt;</code> value would be <code>endpoint</code>.</p>
 <p>Response: Same as the Indy Node <a path-0="hyperledger-indy.readthedocs.io"path-1="projects"path-2="node"path-3="en"path-4="latest"path-5="requests.html#get-attrib"href="https://hyperledger-indy.readthedocs.io/projects/node/en/latest/requests.html#get-attrib" >GET_ATTRIB Txn</a>. Only the <code>raw</code> parameter form of the transaction is supported.</p>
 <p>Existing Identifier: <code>F72i3Y3Q4i466efjYJYCHM:1:b6bf...d9e</code></p>
@@ -301,7 +301,7 @@ self-certifying the identifier must be derived from the initial verkey associate
 </ul>
 <p>The committers to the repo for each network SHOULD include in the folder at least a <a path-0="README.md"href="http://README.md" ><span>README.md</span></a> file with information about the network, plus any additional documents about the ledger instance, such as Governance Framework documents.</p>
 <h4 id="client-usage"><a class="toc-anchor" href="#client-usage" >§</a> Client Usage</h4>
-<p>A client may retrieve selected network genesis files from the repo to use as their set of static files, as described in the <a href="#Static" >previous section</a>. The developers of the clients can monitor the repo for changes to the genesis files that they are using.</p>
+<p>A client may retrieve selected network genesis files from the repo to use as their set of static files, as described in the <a href="#static" >previous section</a>. The developers of the clients can monitor the repo for changes to the genesis files that they are using.</p>
 <p>If a DID is obtained by the client that is from a network not already known by the client, the client MAY look for the unknown (to the client) network in the GitHub repo and decide to use (or not) the associated genesis file to connect to the network.</p>
 <p>The security policy of the client (and perhaps the user of the client) might give options about handling unknown networks, such as:</p>
 <ul>
@@ -338,7 +338,7 @@ self-certifying the identifier must be derived from the initial verkey associate
 <p>The <a class="term-reference" href="#term:nym">NYM</a> transaction requires that the transaction to be written is signed by the DID controller. The ledger MUST verify the signature using the <a class="term-reference" href="#term:nym">NYM</a> <code>verkey</code>. If the signature can not be validated, the transaction MUST be rejected and an error returned to the client.</p>
 </li>
 <li>
-<p>The Indy ledger MUST check that the data in the <a class="term-reference" href="#term:nym">NYM</a> produces valid JSON and MUST do a limited DIDDoc validation check prior to writing the <a class="term-reference" href="#term:nym">NYM</a> object to the ledger. Details of the assembly and verification are <a href="#DIDDoc-Assembly-and-Verification" >below</a>. If the DIDDoc validation fails, the transaction MUST be rejected and an error returned to the client.</p>
+<p>The Indy ledger MUST check that the data in the <a class="term-reference" href="#term:nym">NYM</a> produces valid JSON and MUST do a limited DIDDoc validation check prior to writing the <a class="term-reference" href="#term:nym">NYM</a> object to the ledger. Details of the assembly and verification are <a href="#diddoc-assembly-and-verification" >below</a>. If the DIDDoc validation fails, the transaction MUST be rejected and an error returned to the client.</p>
 </li>
 </ul>
 <p>Although the DIDDoc is returned from the DIDDoc assembly and verification process, the DIDDoc is not used further by the ledger.</p>
@@ -417,50 +417,50 @@ self-certifying the identifier must be derived from the initial verkey associate
 </div>
 <h5 id="example-extended-diddoc-item"><a class="toc-anchor" href="#example-extended-diddoc-item" >§</a> Example Extended DIDDoc Item</h5>
 <p>An example of a <a class="term-reference" href="#term:nym">NYM</a>'s extended DIDDoc handling is provided below. In the example below, the <code>diddocContent</code> item adds a DIDcomm Messaging service endpoint to the resolved DIDDoc. Note that in the example, an <code>@context</code> item is included in the <code>diddocContent</code>, which causes the result DIDDoc to be a JSON-LD document, rather than plain JSON.</p>
-<div id="extended-diddoc-item-example" class="notice example"><a class="notice-link" href="#extended-diddoc-item-example">EXAMPLE</a><pre class="language-jsonld"><code class="language-jsonld">&quot;diddocContent&quot; : {
-    &quot;@context&quot; : [ 
-        &quot;https://www.w3.org/ns/did/v1&quot;,
-        &quot;https://identity.foundation/didcomm-messaging/service-endpoint/v1&quot;
-    ],
-    &quot;serviceEndpoint&quot;: [
-        {
-          &quot;id&quot;: &quot;did:indy:sovrin:123456#didcomm&quot;,
-          &quot;type&quot;: &quot;didcomm-messaging&quot;,
-          &quot;serviceEndpoint&quot;: &quot;https://example.com&quot;,
-          &quot;recipientKeys&quot;: [ &quot;#verkey&quot; ],
-          &quot;routingKeys&quot;: [ ]
-        }
-    ]
-  }
+<div id="extended-diddoc-item-example" class="notice example"><a class="notice-link" href="#extended-diddoc-item-example">EXAMPLE</a><pre class="language-json"><code class="language-json"><span class="token property">"diddocContent"</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"@context"</span> <span class="token operator">:</span> <span class="token punctuation">[</span> 
+        <span class="token string">"https://www.w3.org/ns/did/v1"</span><span class="token punctuation">,</span>
+        <span class="token string">"https://identity.foundation/didcomm-messaging/service-endpoint/v1"</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">"serviceEndpoint"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token property">"id"</span><span class="token operator">:</span> <span class="token string">"did:indy:sovrin:123456#didcomm"</span><span class="token punctuation">,</span>
+          <span class="token property">"type"</span><span class="token operator">:</span> <span class="token string">"didcomm-messaging"</span><span class="token punctuation">,</span>
+          <span class="token property">"serviceEndpoint"</span><span class="token operator">:</span> <span class="token string">"https://example.com"</span><span class="token punctuation">,</span>
+          <span class="token property">"recipientKeys"</span><span class="token operator">:</span> <span class="token punctuation">[</span> <span class="token string">"#verkey"</span> <span class="token punctuation">]</span><span class="token punctuation">,</span>
+          <span class="token property">"routingKeys"</span><span class="token operator">:</span> <span class="token punctuation">[</span> <span class="token punctuation">]</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
 </code></pre>
 </div>
 <p>Applying the DIDDoc assembly rules to the example above produces the following assembled, valid JSON-LD DIDDoc:</p>
-<div id="assembled-extended-json-ld-diddoc-item-example" class="notice example"><a class="notice-link" href="#assembled-extended-json-ld-diddoc-item-example">EXAMPLE</a><pre class="language-jsonld"><code class="language-jsonld">{
-  &quot;@context&quot;: [
-    &quot;https://www.w3.org/ns/did/v1&quot;,
-    &quot;https://identity.foundation/didcomm-messaging/service-endpoint/v1&quot;
-  ],
-  &quot;id&quot;: &quot;did:indy:sovrin:123456&quot;,
-  &quot;verificationMethod&quot;: [{
-      &quot;id&quot;: &quot;did:indy:sovrin:123456#verkey&quot;,
-      &quot;type&quot;: &quot;Ed25519VerificationKey2018&quot;,
-      &quot;publicKeyBase58&quot;: &quot;789abc&quot;,
-      &quot;controller&quot;: &quot;did:indy:sovrin:123456&quot;
-    }
-  ],
-  &quot;authentication&quot;: [
-    &quot;did:indy:sovrin:123456#verkey&quot;
-  ],
-  &quot;serviceEndpoint&quot;: [
-    {
-      &quot;id&quot;: &quot;did:indy:sovrin:123456#didcomm&quot;,
-      &quot;type&quot;: &quot;didcomm-messaging&quot;,
-      &quot;serviceEndpoint&quot;: &quot;https://example.com&quot;,
-      &quot;recipientKeys&quot;: [ &quot;#verkey&quot; ],
-      &quot;routingKeys&quot;: []
-    }
-  ]
-}
+<div id="assembled-extended-json-ld-diddoc-item-example" class="notice example"><a class="notice-link" href="#assembled-extended-json-ld-diddoc-item-example">EXAMPLE</a><pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"@context"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token string">"https://www.w3.org/ns/did/v1"</span><span class="token punctuation">,</span>
+    <span class="token string">"https://identity.foundation/didcomm-messaging/service-endpoint/v1"</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">"id"</span><span class="token operator">:</span> <span class="token string">"did:indy:sovrin:123456"</span><span class="token punctuation">,</span>
+  <span class="token property">"verificationMethod"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+      <span class="token property">"id"</span><span class="token operator">:</span> <span class="token string">"did:indy:sovrin:123456#verkey"</span><span class="token punctuation">,</span>
+      <span class="token property">"type"</span><span class="token operator">:</span> <span class="token string">"Ed25519VerificationKey2018"</span><span class="token punctuation">,</span>
+      <span class="token property">"publicKeyBase58"</span><span class="token operator">:</span> <span class="token string">"789abc"</span><span class="token punctuation">,</span>
+      <span class="token property">"controller"</span><span class="token operator">:</span> <span class="token string">"did:indy:sovrin:123456"</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">"authentication"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token string">"did:indy:sovrin:123456#verkey"</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">"serviceEndpoint"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">"id"</span><span class="token operator">:</span> <span class="token string">"did:indy:sovrin:123456#didcomm"</span><span class="token punctuation">,</span>
+      <span class="token property">"type"</span><span class="token operator">:</span> <span class="token string">"didcomm-messaging"</span><span class="token punctuation">,</span>
+      <span class="token property">"serviceEndpoint"</span><span class="token operator">:</span> <span class="token string">"https://example.com"</span><span class="token punctuation">,</span>
+      <span class="token property">"recipientKeys"</span><span class="token operator">:</span> <span class="token punctuation">[</span> <span class="token string">"#verkey"</span> <span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token property">"routingKeys"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
 </code></pre>
 </div>
 <h4 id="key-agreement"><a class="toc-anchor" href="#key-agreement" >§</a> Key Agreement</h4>
@@ -496,7 +496,7 @@ self-certifying the identifier must be derived from the initial verkey associate
 <p>The <a class="term-reference" href="#term:nym">NYM</a> transaction requires that the transaction to be written is signed by the DID controller using the existing <code>verkey</code> and, if a new <code>verkey</code> is being provided, the new <code>verkey</code>. The ledger MUST verify the signature(s). If the signature(s) cannot be validated, the transaction MUST be rejected and an error returned to the client.</p>
 </li>
 <li>
-<p>The Indy ledger MUST check that the data in the <a class="term-reference" href="#term:nym">NYM</a> produces valid JSON and MUST do a limited DIDDoc validation check prior to writing the <a class="term-reference" href="#term:nym">NYM</a> object to the ledger. Details of the assembly and verification are <a href="#DIDDoc-Assembly-and-Verification" >below</a>. If the DIDDoc validation fails, the transaction MUST be rejected and an error returned to the client.</p>
+<p>The Indy ledger MUST check that the data in the <a class="term-reference" href="#term:nym">NYM</a> produces valid JSON and MUST do a limited DIDDoc validation check prior to writing the <a class="term-reference" href="#term:nym">NYM</a> object to the ledger. Details of the assembly and verification are <a href="#diddoc-assembly-and-verification" >here</a>. If the DIDDoc validation fails, the transaction MUST be rejected and an error returned to the client.</p>
 </li>
 </ul>
 <p>Although the DIDDoc is returned from the DIDDoc assembly and verification process, the DIDDoc is not used further by the ledger.</p>
@@ -508,19 +508,19 @@ self-certifying the identifier must be derived from the initial verkey associate
 <li>Given a <code>did:indy</code> DID, extract the <code>&lt;namespace&gt;</code> component of the DID.</li>
 <li>If the namespace (specific Indy instance) is known to the resolver and the resolver is connected to the ledger continue. If not:
 <ol>
-<li>To read the DIDDoc, the client must get the genesis file for the Indy instance and connect to the ledger. For example, the guidance in the <a href="9_finding_indy_ledgers.md#Finding-Indy-Ledgers" >finding Indy ledgers</a> can be used to discover previously unknown Indy ledgers.</li>
+<li>To read the DIDDoc, the client must get the genesis file for the Indy instance and connect to the ledger. For example, the guidance in the <a href="#finding-indy-ledgers" >finding Indy ledgers</a> can be used to discover previously unknown Indy ledgers.</li>
 <li>If the client cannot find the Indy network terminate the process and return a “Not Found” status to the caller.</li>
 <li>If the client chooses not to connect to the Indy network terminate the process and return a “Not Authorized” status to the caller.</li>
 </ol>
 </li>
 <li>Once connected, the <code>GET_NYM</code> Indy request is used, passing in the <code>&lt;namespace identifer&gt;</code> component.
 <ol>
-<li>If resolving a prior version of the DID, a different call is used in at this point. See the <a href="#DID-Versions" >DID Versions</a> section of this document (below) for more details.</li>
+<li>If resolving a prior version of the DID, a different call is used in at this point. See the <a href="#did-versions" >DID Versions</a> section of this document (below) for more details.</li>
 </ol>
 </li>
 <li>If the call fails, terminate the process and return a “Not Found” status to the caller.</li>
 <li>If a <a class="term-reference" href="#term:nym">NYM</a> is returned, use the state proof to verify the result. If the verification fails, terminate the process and return a “Not Found” status to the caller.</li>
-<li>Use the DID <code>&lt;namespace&gt;</code> component, the <a class="term-reference" href="#term:nym">NYM</a> data items <code>dest</code>, <code>verkey</code>, and (optional) <code>diddocContent</code> to assemble the DIDDoc using the <a href="#DIDDoc-Assembly-and-Verification" >DIDDoc assembly process</a> defined earlier in this document.
+<li>Use the DID <code>&lt;namespace&gt;</code> component, the <a class="term-reference" href="#term:nym">NYM</a> data items <code>dest</code>, <code>verkey</code>, and (optional) <code>diddocContent</code> to assemble the DIDDoc using the <a href="#diddoc-assembly-and-verification" >DIDDoc assembly process</a> defined earlier in this document.
 <ol>
 <li>Since the assembly validation was done by the ledger before writing the document, the process should be successful.</li>
 </ol>
@@ -533,7 +533,7 @@ self-certifying the identifier must be derived from the initial verkey associate
 <p>If the parameter <code>versionTime</code> is used, the <code>GET_NYM</code> transaction is called with the <code>versionTime</code> timestamp as an additional parameter. The Indy ledger code tries to find the instance of the requested <a class="term-reference" href="#term:nym">NYM</a> that was active at that time (using ledger transaction timestamps) and returns it (if found) or the call fails. Either way, the process continues at Step 4.</p>
 <h3 id="deactivate"><a class="toc-anchor" href="#deactivate" >§</a> Deactivate</h3>
 <p>Deactivtion of a <code>did:indy</code> DID is done by setting the <a class="term-reference" href="#term:nym">NYM</a> verkey to null. Once done, the DIDDoc is not found (per
-the <a href="#DIDDoc-Assembly-Steps" >DIDDoc Assembly Rules</a>) and the <a class="term-reference" href="#term:nym">NYM</a> cannot be updated again.</p>
+the <a href="#diddoc-assembly-steps" >DIDDoc Assembly Rules</a>) and the <a class="term-reference" href="#term:nym">NYM</a> cannot be updated again.</p>
 <div id="dead-link" class="notice warning"><a class="notice-link" href="#dead-link">WARNING</a><p>section <code>#diddoc-assembly-rules</code> does not exist. Pointing to <code>#DIDDoc-Assembly-Steps</code></p>
 </div>
 <h2 id="didindy-did-component-syntax"><a class="toc-anchor" href="#didindy-did-component-syntax" >§</a> <code>did:indy</code> DID Component Syntax</h2>
@@ -544,7 +544,7 @@ the <a href="#DIDDoc-Assembly-Steps" >DIDDoc Assembly Rules</a>) and the <a clas
 namestring    = ALPHA *(ALPHA / DIGIT / &quot;_&quot; / &quot;-&quot;)
 </code></pre>
 <p>The namespace is set by the operator of the network. Although that could lead to namespace collisions, our
-<a href="6_motivation_and_assumptions.md#Assumption:-Number-of-Indy-Instances" >assumption about the expected number of Indy instances</a> (low 100s at the most) eliminates that as a concern.</p>
+<a href="#assumption-number-of-indy-instances" >assumption about the expected number of Indy instances</a> (low 100s at the most) eliminates that as a concern.</p>
 <h3 id="didindy-did-namespace-identifier-syntax"><a class="toc-anchor" href="#didindy-did-namespace-identifier-syntax" >§</a> <code>did:indy</code> DID Namespace Identifier Syntax</h3>
 <p>The namespace identifer is an identifier within the namespace of a Hyperledger Indy network that is unique for that namespace.</p>
 <p>The namespace identifier (NSID) is defined by the following ABNF:</p>
@@ -556,7 +556,7 @@ base58char    = &quot;1&quot; / &quot;2&quot; / &quot;3&quot; / &quot;4&quot; / 
               / &quot;q&quot; / &quot;r&quot; / &quot;s&quot; / &quot;t&quot; / &quot;u&quot; / &quot;v&quot; / &quot;w&quot; / &quot;x&quot; / &quot;y&quot; / &quot;z&quot;
 </code></pre>
 <p>The <code>NSIDString</code> is base58 encoded using the Bitcoin/IPFS alphabets of a 16-byte uuid. The encoding uses most alphas and digits, omitting 0 / O / I / l to avoid readability problems. This gives a NSID length of either 21 or 22 characters, and it means that identifiers are case-sensitive and may not be case-normalized, even though the prefix is always lower-case.</p>
-<p>The namespace identifier MUST be derived from the initial <code>verkey</code> for the DID, as outlined in the <a href="10_did_operations.md#Creation" >Creation</a> section of this document.</p>
+<p>The namespace identifier MUST be derived from the initial <code>verkey</code> for the DID, as outlined in the <a href="#creation" >Creation</a> section of this document.</p>
 <h2 id="json-or-json-ld"><a class="toc-anchor" href="#json-or-json-ld" >§</a> JSON or JSON-LD</h2>
 <p>The choice of whether a DID resolves to a JSON or JSON-LD document is up to the DID Controller. If the <a class="term-reference" href="#term:nym">NYM</a> object on the ledger for the DID has a <code>diddocContent</code> data item, and that data item contains an <code>@context</code> item, the DIDDoc will be JSON-LD. Otherwise, the resolved DIDDoc will be JSON.</p>
 <p>The Indy ledger does not validate the JSON-LD on writing a <a class="term-reference" href="#term:nym">NYM</a> object to the ledger. It is the responsibility of the DID Controller to ensure that a JSON-LD DIDDoc is valid JSON-LD.</p>
@@ -763,10 +763,10 @@ base58char    = &quot;1&quot; / &quot;2&quot; / &quot;3&quot; / &quot;4&quot; / 
 <li><a href="#did-urls-for-indy-object-identifiers" >DID URLs for Indy Object Identifiers</a>
 <ul>
 <li><a href="#schema" >Schema</a></li>
-<li><a href="#claim-def" >Claim Def:</a></li>
-<li><a href="#revocation-registry-definition" >Revocation Registry Definition:</a></li>
-<li><a href="#revocation-registry-entry" >Revocation Registry Entry:</a></li>
-<li><a href="#attrib" >ATTRIB:</a></li>
+<li><a href="#claim-def" >Claim Def</a></li>
+<li><a href="#revocation-registry-definition" >Revocation Registry Definition</a></li>
+<li><a href="#revocation-registry-entry" >Revocation Registry Entry</a></li>
+<li><a href="#attrib" >ATTRIB</a></li>
 </ul>
 </li>
 </ul>
